@@ -45,11 +45,11 @@ $categories = get_all_categories($conn);
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body style="background-image: url(https://wallpapercave.com/wp/wp2655401.jpg);"> 
 	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="index.php">Game Store</a>
+		    <a class="navbar-brand" href="index.php" style="color: white;">Game Store</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -59,23 +59,15 @@ $categories = get_all_categories($conn);
 		        <li class="nav-item">
 		          <a class="nav-link active" 
 		             aria-current="page" 
-		             href="index.php">Store</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" 
-		             href="#">Contact</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" 
-		             href="#">About</a>
+		             href="index.php" style="color: white;">Store</a>
 		        </li>
 		        <li class="nav-item">
 		          <?php if (isset($_SESSION['user_id'])) {?>
 		          	<a class="nav-link" 
-		             href="admin.php">Admin</a>
+		             href="admin.php" style="color: white;">Admin</a>
 		          <?php }else{ ?>
 		          <a class="nav-link" 
-		             href="login.php">Login</a>
+		             href="login.php" style="color: white;">Login</a>
 		          <?php } ?>
 
 		        </li>
@@ -83,11 +75,10 @@ $categories = get_all_categories($conn);
 		    </div>
 		  </div>
 		</nav>
-		<h1 class="display-4 p-3 fs-3"> 
+		<h1 class="display-4 p-3 fs-3" style="color: white;"> 
 			<a href="index.php"
 			   class="nd">
-				<img src="img/back-arrow.PNG" 
-				     width="35">
+			
 			</a>
 		   <?=$current_publisher['name']?>
 		</h1>
@@ -102,7 +93,7 @@ $categories = get_all_categories($conn);
 			    There is no game in the database
 		       </div>
 			<?php }else{ ?>
-			<div class="pdf-list d-flex flex-wrap">
+			<div class="pdf-list d-flex flex-wrap", style="height: 500px;">
 				<?php foreach ($games as $game) { ?>
 				<div class="card m-1">
 					<img src="uploads/cover/<?=$game['cover']?>"
@@ -139,7 +130,7 @@ $categories = get_all_categories($conn);
 									<?= $game['price'] . "$" ?>
 								</h5>
 						
-								<a style="margin-left:100px;padding-right:50px;" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>">Buy	</a>
+								<a style="margin-left:100px;padding-right:50px;background-color:steelblue" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>">Buy	</a>
 								
 								</div>
 					</div>
@@ -155,7 +146,7 @@ $categories = get_all_categories($conn);
 					// do nothing
 				}else{ ?>
 				<a href="#"
-				   class="list-group-item list-group-item-action active">Category</a>
+				   class="list-group-item list-group-item-action active" style="background-color: steelblue;">Category</a>
 				   <?php foreach ($categories as $category ) {?>
 				  
 				   <a href="category.php?id=<?=$category['id']?>"
@@ -170,7 +161,7 @@ $categories = get_all_categories($conn);
 					// do nothing
 				}else{ ?>
 				<a href="#"
-				   class="list-group-item list-group-item-action active">Publishers</a>
+				   class="list-group-item list-group-item-action active" style="background-color: steelblue;">Publishers</a>
 				   <?php foreach ($publishers as $publisher ) {?>
 				  
 				   <a href="publisher.php?id=<?=$publisher['id']?>"

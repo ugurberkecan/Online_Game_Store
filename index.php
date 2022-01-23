@@ -35,24 +35,24 @@ $categories = get_all_categories($conn);
 
 </head>
 
-<body>
+<body style="background-image: url(https://wallpapercave.com/wp/wp2655401.jpg);">
 	<div class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.php">Game Store</a>
+		<nav class="navbar navbar-expand-lg ">
+			<div class="container-fluid" style="background-color: black;" >
+				<a class="navbar-brand" href="index.php" style="color: white;">Game Store</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.php">Main Page</a>
+							<a class="nav-link active" aria-current="page" href="index.php" style="color: white;">Main Page</a>
 						</li>
 						<li class="nav-item">
 							<?php if (isset($_SESSION['user_id'])) { ?>
 								<a class="nav-link" href="admin.php">Admin</a>
 							<?php } else { ?>
-								<a class="nav-link" href="login.php">Login</a>
+								<a class="nav-link" href="login.php" style="color: white;">Login</a>
 							<?php } ?>
 
 						</li>
@@ -60,13 +60,13 @@ $categories = get_all_categories($conn);
 				</div>
 			</div>
 		</nav>
-		<form action="search.php" method="get" style="width: 100%; max-width: 30rem">
+		<form action="search.php" method="get">
 
 			<div class="input-group my-5">
-				<input type="text" class="form-control" name="key" placeholder="Search Game..." aria-label="Search Game..." aria-describedby="basic-addon2">
+				<input type="text" class="form-control" name="key" placeholder="Search Game..." aria-label="Search Game..." aria-describedby="basic-addon2" style="background-color:black;color: white;">
 
 				<button class="input-group-text
-		                 btn btn-primary" id="basic-addon2">
+		                 btn btn-primary" id="basic-addon2" style="background-color:steelblue;" >
 					<img src="img/search.png" width="20">
 
 				</button>
@@ -116,7 +116,7 @@ $categories = get_all_categories($conn);
 									<?= $game['price'] . "$" ?>
 								</h5>
 						
-								<a style="margin-left:100px;padding-right:50px;" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>">Buy	</a>
+								<a style="margin-left:100px;padding-right:50px;background-color: steelblue;" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>" >Buy	</a>
 								
 								</div>
 								</p>
@@ -133,7 +133,7 @@ $categories = get_all_categories($conn);
 					<?php if ($categories == 0) {
 						// do nothing
 					} else { ?>
-						<a href="#" class="list-group-item list-group-item-action active">Category</a>
+						<a href="#" class="list-group-item list-group-item-action active" style="background-color: steelblue;">Category</a>
 						<?php foreach ($categories as $category) { ?>
 
 							<a href="category.php?id=<?= $category['id'] ?>" class="list-group-item list-group-item-action">
@@ -147,7 +147,7 @@ $categories = get_all_categories($conn);
 					<?php if ($publishers == 0) {
 						// do nothing
 					} else { ?>
-						<a href="#" class="list-group-item list-group-item-action active">Publishers</a>
+						<a href="#" class="list-group-item list-group-item-action active" style="background-color: steelblue;">Publishers</a>
 						<?php foreach ($publishers as $publisher) { ?>
 
 							<a href="publisher.php?id=<?= $publisher['id'] ?>" class="list-group-item list-group-item-action">
