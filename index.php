@@ -49,12 +49,6 @@ $categories = get_all_categories($conn);
 							<a class="nav-link active" aria-current="page" href="index.php">Main Page</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
 							<?php if (isset($_SESSION['user_id'])) { ?>
 								<a class="nav-link" href="admin.php">Admin</a>
 							<?php } else { ?>
@@ -116,12 +110,16 @@ $categories = get_all_categories($conn);
 											?>
 
 											<?php } ?>
-											<br></b></i>
-								<h5 class="card-title">
-									<?= $game['price']."$"?>
+											<br></b></i><td>
+												<div style="display :inline-flex">
+								<h5 style="text-align:center;margin-top:5px"  class="card-title">
+									<?= $game['price'] . "$" ?>
 								</h5>
+						
+								<a style="margin-left:100px;padding-right:50px;" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>">Buy	</a>
+								
+								</div>
 								</p>
-
 
 
 							</div>

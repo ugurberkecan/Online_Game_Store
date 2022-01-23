@@ -19,14 +19,15 @@ if (!isset($_SESSION['user_id']) &&
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body style="background-image: url(https://static.alphacoders.com/thumbs_categories/32.jpg)">
 	<div class="d-flex justify-content-center align-items-center"
 	     style="min-height: 100vh;">
+		 <div class="card m-1">
 		<form class="p-5 rounded shadow"
-		      style="max-width: 30rem; width: 100%"
+		      style="max-width: 30rem; width: 100%;height: 500px;width: 500px""	
 		      method="POST"
 		      action="php/auth.php">
-
+			
 		  <h1 class="text-center display-4 pb-5">LOGIN</h1>
 		  <?php if (isset($_GET['error'])) { ?>
           <div class="alert alert-danger" role="alert">
@@ -43,7 +44,7 @@ if (!isset($_SESSION['user_id']) &&
 		           id="exampleInputEmail1" 
 		           aria-describedby="emailHelp">
 		  </div>
-
+		
 		  <div class="mb-3">
 		    <label for="exampleInputPassword1" 
 		           class="form-label">Password</label>
@@ -53,10 +54,13 @@ if (!isset($_SESSION['user_id']) &&
 		           id="exampleInputPassword1">
 		  </div>
 		  <button type="submit" 
-		          class="btn btn-primary">
+		          class="btn btn-primary"
+				  ">
 		          Login</button>
-		   <a href="index.php">Store</a>
+		   <a href="index.php" style="padding-left: 275px">Store</a>
+		 
 		</form>
+		  </div class="card m-1">
 	</div>
 </body>
 </html>

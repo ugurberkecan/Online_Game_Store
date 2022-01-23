@@ -132,12 +132,14 @@ $current_category = get_category($conn, $id);
 								<?php } ?>
 							<br></b></i>
 						</p>
-                       <a href="uploads/files/<?=$game['file']?>"
-                          class="btn btn-success">Open</a>
-
-                        <a href="uploads/files/<?=$game['file']?>"
-                          class="btn btn-primary"
-                          download="<?=$game['title']?>">Download</a>
+						<div style="display :inline-flex">
+								<h5 style="text-align:center;margin-top:5px"  class="card-title">
+									<?= $game['price'] . "$" ?>
+								</h5>
+						
+								<a style="margin-left:100px;padding-right:50px;" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>">Buy	</a>
+								
+								</div>
 					</div>
 				</div>
 				<?php } ?>

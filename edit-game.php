@@ -109,7 +109,7 @@ if (isset($_SESSION['user_id']) &&
 		<?php } ?>
      	<div class="mb-3">
 		    <label class="form-label">
-		           game Title
+		           Game Title
 		           </label>
 		    <input type="text" 
 		           hidden
@@ -124,7 +124,7 @@ if (isset($_SESSION['user_id']) &&
 
 		<div class="mb-3">
 		    <label class="form-label">
-		           game Description
+		           Game Description
 		           </label>
 		    <input type="text" 
 		           class="form-control" 
@@ -134,7 +134,7 @@ if (isset($_SESSION['user_id']) &&
 
 		<div class="mb-3">
 		    <label class="form-label">
-		           game publisher
+		           Game Publisher
 		           </label>
 		    <select name="game_publisher"
 		            class="form-control">
@@ -163,7 +163,7 @@ if (isset($_SESSION['user_id']) &&
 
 		<div class="mb-3">
 		    <label class="form-label">
-		           game Category
+		           Game Category
 		           </label>
 		    <select name="game_category"
 		            class="form-control">
@@ -192,7 +192,7 @@ if (isset($_SESSION['user_id']) &&
 
 		<div class="mb-3">
 		    <label class="form-label">
-		           game Cover
+		        Game Cover
 		           </label>
 		    <input type="file" 
 		           class="form-control" 
@@ -208,7 +208,7 @@ if (isset($_SESSION['user_id']) &&
 		</div>
 		<div class="mb-3">
 		    <label class="form-label">
-		           Price
+		           Game Price
 		           </label>
 		    <input type="text" 
 		           class="form-control" 

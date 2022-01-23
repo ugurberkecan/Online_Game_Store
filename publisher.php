@@ -49,7 +49,7 @@ $categories = get_all_categories($conn);
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href="index.php">Online game Store</a>
+		    <a class="navbar-brand" href="index.php">Game Store</a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -134,12 +134,14 @@ $categories = get_all_categories($conn);
 								<?php } ?>
 							<br></b></i>
 						</p>
-                       <a href="uploads/files/<?=$game['file']?>"
-                          class="btn btn-success">Open</a>
-
-                        <a href="uploads/files/<?=$game['file']?>"
-                          class="btn btn-primary"
-                          download="<?=$game['title']?>">Download</a>
+						<div style="display :inline-flex">
+								<h5 style="text-align:center;margin-top:5px"  class="card-title">
+									<?= $game['price'] . "$" ?>
+								</h5>
+						
+								<a style="margin-left:100px;padding-right:50px;" href="uploads/files/<?= $game['file'] ?>" class="btn btn-primary" download="<?= $game['title'] ?>">Buy	</a>
+								
+								</div>
 					</div>
 				</div>
 				<?php } ?>
@@ -168,7 +170,7 @@ $categories = get_all_categories($conn);
 					// do nothing
 				}else{ ?>
 				<a href="#"
-				   class="list-group-item list-group-item-action active">publisher</a>
+				   class="list-group-item list-group-item-action active">Publishers</a>
 				   <?php foreach ($publishers as $publisher ) {?>
 				  
 				   <a href="publisher.php?id=<?=$publisher['id']?>"
